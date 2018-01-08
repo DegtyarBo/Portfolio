@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>без имени</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.30.1" />
+  <title>Заголовок страници</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" type = "text/css">
+</head>
+
+<body>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>{% include "mainApp/includes/some_html.html" %}</h1>
+	       {% block content %}
+         {% endblock %}
+
+      <p>
+        <a href='/' class = 'btn btn-success btn-lg'>Main Page</a>
+        <a href='/news' class = 'btn btn-primary btn-lg'>News &raquo;</a>
+        <a href='/contact' class = 'btn btn-info btn-lg'>Contacts &raquo;</a>
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <img src="{%static 'mainApp/news-3.jpg'%}"class="img-thumbnail">
+    <hr>
+    &copy; All rights reserved 2018
+</body>
+
+</html>
